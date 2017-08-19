@@ -6,7 +6,7 @@ public class ScaleChanger: MonoBehaviour {
 
     float speed = 0.03f;
     float angle;
-    float radius = 0.01f;
+    float radius = 0.02f;
 
     // Use this for initialization
     void Start()
