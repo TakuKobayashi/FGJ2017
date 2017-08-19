@@ -789,6 +789,7 @@ GameObject:
   - component: {fileID: 1335653748}
   - component: {fileID: 1335653747}
   - component: {fileID: 1335653746}
+  - component: {fileID: 1335653749}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -860,6 +861,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1335653744}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1335653749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335653744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26c87fd7a8b0195459d1582623db8218, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  texture:
+  - {fileID: 2800000, guid: b6d366a081c42b24e917eee1a8c2a68c, type: 3}
+  - {fileID: 2800000, guid: f59edd735710f5e4aa3e980cea8ef592, type: 3}
+  material: {fileID: 2100000, guid: ba11e2e1c5b29c74a863a9f52addf7ae, type: 2}
 --- !u!1 &1541264498
 GameObject:
   m_ObjectHideFlags: 0
