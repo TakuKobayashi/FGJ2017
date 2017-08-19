@@ -121,6 +121,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -136,6 +137,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -158,6 +160,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1726121998433162}
   m_Enabled: 1
+  m_ExtensionPropertyValues: []
 --- !u!92 &92413660542069134
 Behaviour:
   m_ObjectHideFlags: 1
@@ -176,6 +179,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b800d14fe144489956f6a57e305d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouseLook:
+    XSensitivity: 2
+    YSensitivity: 2
+    clampVerticalRotation: 1
+    MinimumX: -90
+    MaximumX: 90
+    smooth: 0
+    smoothTime: 5
+    lockCursor: 1
+  mainCamera: {fileID: 20846291283445150}
 --- !u!124 &124324488644185060
 Behaviour:
   m_ObjectHideFlags: 1
