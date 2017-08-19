@@ -11,7 +11,7 @@ public class InstanceParticle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        Object.Instantiate(particle[0]);
+        //Object.Instantiate(particle[0]);
 
     }
 	
