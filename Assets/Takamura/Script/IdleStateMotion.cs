@@ -6,9 +6,10 @@ public class IdleStateMotion : MonoBehaviour {
 
     float speed = 0.04f;
     float angle;
+    float radius = 0.002f;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
         angle = 0;
 
@@ -21,7 +22,7 @@ public class IdleStateMotion : MonoBehaviour {
         if (speed >= 360)
             speed = 0;
 
-        transform.Translate(new Vector3(0, 0.002f * (float)Mathf.Sin(angle),0));
+        transform.Translate(new Vector3(0, radius * (float)Mathf.Sin(angle),0));
 
 	}
 }
