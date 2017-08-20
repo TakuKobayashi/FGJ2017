@@ -25,8 +25,10 @@ public class InstanceParticle : MonoBehaviour {
             Object.Instantiate(particle[0]);
         }
 
-        if (counter == 500)
+        if (counter == 250)
             Object.Instantiate(particle[1]);
 
+        if (counter == 500)
+            Object.Instantiate(particle[2]);
 	}
 }
