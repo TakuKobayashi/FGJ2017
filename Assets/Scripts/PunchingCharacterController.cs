@@ -10,14 +10,13 @@ public class PunchingCharacterController : MonoBehaviour {
     [SerializeField] GameObject bodyHitSoundObj;
     [SerializeField] bool mouseLookEnable;
 
+    private bool isMove = false;
     private Vector3 prevCharacterPosition;
 
 	// Use this for initialization
 	void Start () {
 		mouseLook.Init(transform, mainCamera.transform);
         prevCharacterPosition = characterObject.transform.position;
-        StartCoroutine(PlayHitSoundCorutine());
-        //OnPunchHit();
 	}
 
     private IEnumerator PlayHitSoundCorutine(){
@@ -31,6 +30,10 @@ public class PunchingCharacterController : MonoBehaviour {
 	void Update () {
         if(mouseLookEnable){
 			mouseLook.LookRotation(transform, mainCamera.transform);
+        }
+        HandModel[] hands = handController.GetAllPhysicsHands();
+        for (int i = 0; i < hands.Length;++i){
+            hands[i].palm.GetComponent<PunchedObject>().OnHit = this.OnPunchHit;
         }
         handController.transform.position = handController.transform.position + DiffCharacterObjectPosition();
 		mainCamera.transform.position = mainCamera.transform.position + DiffCharacterObjectPosition();
@@ -46,8 +49,12 @@ public class PunchingCharacterController : MonoBehaviour {
 	}
 
 
-    void OnPunchHit(){
-        ShootCharacter();
+    void OnPunchHit(Collision collision){
+        if(!isMove){
+			isMove = true;
+            StartCoroutine(PlayHitSoundCorutine());
+			ShootCharacter();
+        }
     }
 
     private void ShootCharacter(){
