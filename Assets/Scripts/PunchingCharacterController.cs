@@ -12,11 +12,15 @@ public class PunchingCharacterController : MonoBehaviour {
 
     private bool isMove = false;
     private Vector3 prevCharacterPosition;
+    private Vector3 startCharacterPosition;
+    private float score;
+    private bool isOnLand;
 
 	// Use this for initialization
 	void Start () {
 		mouseLook.Init(transform, mainCamera.transform);
         prevCharacterPosition = characterObject.transform.position;
+        startCharacterPosition = characterObject.transform.position;
 	}
 
     private IEnumerator PlayHitSoundCorutine(){
@@ -31,6 +35,11 @@ public class PunchingCharacterController : MonoBehaviour {
         if(mouseLookEnable){
 			mouseLook.LookRotation(transform, mainCamera.transform);
         }
+        if (isMove && !isOnLand && characterObject.transform.position.y < startCharacterPosition.y)
+		{
+            isOnLand = true;
+            Debug.Log("Land:" + score.ToString());
+		}
         HandModel[] hands = handController.GetAllPhysicsHands();
         for (int i = 0; i < hands.Length;++i){
             hands[i].palm.GetComponent<PunchedObject>().OnHit = this.OnPunchHit;
