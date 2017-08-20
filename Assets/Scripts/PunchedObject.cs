@@ -63,7 +63,7 @@ public class PunchedObject : MonoBehaviour {
 	{
 
 		// debug用
-		testMove(); // テスト用。手の移動
+//		testMove(); // テスト用。手の移動
 
 		// 反発係数
 		float fHanpatuKeisuu;
