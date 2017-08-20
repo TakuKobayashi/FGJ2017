@@ -1,5 +1,6 @@
 ﻿using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
+using UnityEngine.PostProcessing;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -24,10 +25,11 @@ public class PunchingCharacterController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        mainCamera.GetComponent<PostProcessingBehaviour>().enabled = false;
         System.Random rand = new System.Random();
         int index = rand.Next(bossObjList.Count);
         GameObject go = Util.InstantiateTo(this.gameObject, bossObjList[index]);
-        go.transform.localPosition = new Vector3(0, 0, 4f);
+        go.transform.localPosition = new Vector3(0, 0, 3f);
         go.transform.localScale = new Vector3(3f, 3f, 3f);
 
 		mouseLook.Init(transform, mainCamera.transform);
@@ -53,6 +55,7 @@ public class PunchingCharacterController : MonoBehaviour {
             if (characterObject.transform.position.y < startCharacterPosition.y)
             {
                 isOnLand = true;
+				mainCamera.GetComponent<PostProcessingBehaviour>().enabled = true;
                 ShowCompleteView();
             }
 		}
