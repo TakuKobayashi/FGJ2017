@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 460564}
   - component: {fileID: 6560534}
   - component: {fileID: 5460534}
-  - component: {fileID: 114049566696784514}
   m_Layer: 0
   m_Name: palm
   m_TagString: Untagged
@@ -1326,14 +1325,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160576}
   m_IsPrefabParent: 1
---- !u!114 &114049566696784514
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 160562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8856391e3e7a93542985bee37f0c0b4a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
