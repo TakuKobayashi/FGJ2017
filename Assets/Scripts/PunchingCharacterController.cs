@@ -12,7 +12,7 @@ public class PunchingCharacterController : MonoBehaviour {
 	[SerializeField] Canvas mainCanvas;
     [SerializeField] GameObject completeViewObj;
     [SerializeField] float xpower = 5f;
-	[SerializeField] float zpower = 20f;
+	[SerializeField] float zpower = 10f;
 
     private bool isMove = false;
     private Vector3 prevCharacterPosition;
