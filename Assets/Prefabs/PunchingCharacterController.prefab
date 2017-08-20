@@ -308,7 +308,7 @@ MonoBehaviour:
   handController: {fileID: 114102933516375862}
   bodyHitSoundObj: {fileID: 1559902988203284, guid: a36e7deebf35a4c088668f66435ea81a,
     type: 2}
-  mouseLookEnable: 1
+  mouseLookEnable: 0
   mainCanvas: {fileID: 0}
   completeViewObj: {fileID: 1078312557940596, guid: c0d14fa1b5e1649b0a2e9e0a273b72a4,
     type: 2}
