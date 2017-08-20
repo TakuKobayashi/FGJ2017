@@ -64,7 +64,8 @@ public class PunchingCharacterController : MonoBehaviour {
 
     private void ShowCompleteView(){
         GameObject completeView = Util.InstantiateTo(mainCanvas.gameObject, completeViewObj);
-        Debug.Log(score);
+        GameCompleteView view = completeView.GetComponent<GameCompleteView>();
+        view.SetScore(score);
     }
 
 	void FixedUpdate()
