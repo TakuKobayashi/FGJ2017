@@ -102,13 +102,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575861624235256}
-  m_LocalRotation: {x: 0.2588191, y: -0, z: -0, w: 0.9659258}
+  m_LocalRotation: {x: 0.08715578, y: 0, z: 0, w: 0.9961947}
   m_LocalPosition: {x: 0, y: 5.5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4638439274701740}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 10, y: 0, z: 0}
 --- !u!4 &4638439274701740
 Transform:
   m_ObjectHideFlags: 1
@@ -312,6 +312,8 @@ MonoBehaviour:
   mainCanvas: {fileID: 0}
   completeViewObj: {fileID: 1078312557940596, guid: c0d14fa1b5e1649b0a2e9e0a273b72a4,
     type: 2}
+  xpower: 5
+  zpower: 10
 --- !u!114 &114977554834341494
 MonoBehaviour:
   m_ObjectHideFlags: 1
