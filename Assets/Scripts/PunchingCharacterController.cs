@@ -5,6 +5,7 @@ public class PunchingCharacterController : MonoBehaviour {
 	[SerializeField] MouseLook mouseLook;
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject characterObject;
+    [SerializeField] bool mouseLookEnable;
 
 	// Use this for initialization
 	void Start () {
@@ -15,12 +16,17 @@ public class PunchingCharacterController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         mainCamera.transform.position = characterObject.transform.position;
-        mouseLook.LookRotation(transform, mainCamera.transform);
+        if(mouseLookEnable){
+			mouseLook.LookRotation(transform, mainCamera.transform);
+        }
 	}
 
 	void FixedUpdate()
 	{
-		mouseLook.UpdateCursorLock();
+        if (mouseLookEnable)
+        {
+            mouseLook.UpdateCursorLock();
+        }
 	}
 
 
