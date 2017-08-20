@@ -49,17 +49,17 @@ public class PunchingCharacterController : MonoBehaviour {
 	}
 
 
-    void OnPunchHit(Collision collision){
+    void OnPunchHit(Collision collision, Vector3 hitSpeed){
         if(!isMove){
 			isMove = true;
             StartCoroutine(PlayHitSoundCorutine());
-			ShootCharacter();
+			ShootCharacter(hitSpeed);
         }
     }
 
-    private void ShootCharacter(){
+    private void ShootCharacter(Vector3 hitSpeed){
 		Rigidbody rigidbody = characterObject.AddComponent<Rigidbody>();
-		Vector3 shootVector = Util.ShootVectorFromSpeed(characterObject.gameObject.transform.position, new Vector3(10, 0, -20), 3.0f);
+        Vector3 shootVector = Util.ShootVectorFromSpeed(characterObject.gameObject.transform.position, new Vector3(10, 0, -20), hitSpeed.sqrMagnitude);
 		// 速さベクトルのままAddForce()を渡してはいけないぞ。力(速さ×重さ)に変換するんだ
 		Vector3 force = shootVector * rigidbody.mass;
 		rigidbody.AddForce(force, ForceMode.Impulse);
