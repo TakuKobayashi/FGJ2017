@@ -11,7 +11,7 @@ public class InstanceParticle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        //Object.Instantiate(particle[0]);
+        Object.Instantiate(particle[0]);
 
     }
 	
@@ -22,8 +22,11 @@ public class InstanceParticle : MonoBehaviour {
         if (counter > 500)
         {
             counter = 0;
-            Object.Instantiate(particle[1]);
+            Object.Instantiate(particle[0]);
         }
+
+        if (counter == 500)
+            Object.Instantiate(particle[1]);
 
 	}
 }
