@@ -12,7 +12,6 @@ public class InstanceParticle : MonoBehaviour {
 	void Start () {
 
         Object.Instantiate(particle[0]);
-
     }
 	
 	// Update is called once per frame
