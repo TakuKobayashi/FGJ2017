@@ -39,10 +39,14 @@ public class PunchingCharacterController : MonoBehaviour {
         if(mouseLookEnable){
 			mouseLook.LookRotation(transform, mainCamera.transform);
         }
-        if (isMove && !isOnLand && characterObject.transform.position.y < startCharacterPosition.y)
+		if (isMove && !isOnLand)
 		{
-            isOnLand = true;
-            ShowCompleteView();
+            SetCalcScore();
+            if (characterObject.transform.position.y < startCharacterPosition.y)
+            {
+                isOnLand = true;
+                ShowCompleteView();
+            }
 		}
         HandModel[] hands = handController.GetAllPhysicsHands();
         for (int i = 0; i < hands.Length;++i){
@@ -53,8 +57,14 @@ public class PunchingCharacterController : MonoBehaviour {
 		prevCharacterPosition = characterObject.transform.position;
 	}
 
+    private void SetCalcScore(){
+        Vector3 currentPos = characterObject.transform.position;
+        score = Mathf.Max(score, Mathf.Sqrt(Mathf.Pow(currentPos.x, 2f) + Mathf.Pow(currentPos.y, 2f) + Mathf.Pow(currentPos.z, 2f)));
+    }
+
     private void ShowCompleteView(){
-        Util.InstantiateTo(mainCanvas.gameObject, completeViewObj);
+        GameObject completeView = Util.InstantiateTo(mainCanvas.gameObject, completeViewObj);
+        Debug.Log(score);
     }
 
 	void FixedUpdate()
