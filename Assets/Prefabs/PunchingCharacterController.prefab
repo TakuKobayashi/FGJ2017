@@ -294,10 +294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b800d14fe144489956f6a57e305d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bossObjList:
-  - {fileID: 1527023655144982, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
-  - {fileID: 1799322934875754, guid: 1bbd72e7953513f4980cd2ac6d4b0058, type: 2}
-  - {fileID: 1966791517078476, guid: 0be28c19bcd0e2f4c8ab228d8877f997, type: 2}
   mouseLook:
     XSensitivity: 2
     YSensitivity: 2

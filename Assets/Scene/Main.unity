@@ -172,7 +172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236493131 stripped
 GameObject:
@@ -224,7 +224,7 @@ Transform:
   - {fileID: 1134312940}
   - {fileID: 708061745}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &404331095
 Prefab:
@@ -565,6 +565,64 @@ Transform:
   m_Father: {fileID: 287726203}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &731235959
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114470931713542334, guid: 0a50eebd01f854b71ba177608bc790a0,
+        type: 2}
+      propertyPath: particle.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271765241947870, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114470931713542334, guid: 0a50eebd01f854b71ba177608bc790a0,
+        type: 2}
+      propertyPath: particle.Array.data[0]
+      value: 
+      objectReference: {fileID: 1151799078676162, guid: 04227f362cc709d4096e1ad047b12441,
+        type: 2}
+    - target: {fileID: 114470931713542334, guid: 0a50eebd01f854b71ba177608bc790a0,
+        type: 2}
+      propertyPath: particle.Array.data[2]
+      value: 
+      objectReference: {fileID: 100000, guid: d25b89b28408c99438285b396b1cfd54, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0a50eebd01f854b71ba177608bc790a0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &854422498
 Prefab:
   m_ObjectHideFlags: 0
@@ -715,7 +773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1134312940 stripped
 Transform:
@@ -973,23 +1031,21 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4988458331362548, guid: c388c3628ccbd4822a7a04e47c5f1997, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114498232447654560, guid: c388c3628ccbd4822a7a04e47c5f1997,
         type: 2}
       propertyPath: mainCanvas
       value: 
       objectReference: {fileID: 420942613}
-    - target: {fileID: 4956607216965132, guid: c388c3628ccbd4822a7a04e47c5f1997, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
+    - target: {fileID: 114498232447654560, guid: c388c3628ccbd4822a7a04e47c5f1997,
+        type: 2}
+      propertyPath: mouseLookEnable
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4638439274701740, guid: c388c3628ccbd4822a7a04e47c5f1997, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4766271388687190, guid: c388c3628ccbd4822a7a04e47c5f1997, type: 2}
-      propertyPath: m_RootOrder
+    - target: {fileID: 114498232447654560, guid: c388c3628ccbd4822a7a04e47c5f1997,
+        type: 2}
+      propertyPath: mouseLook.lockCursor
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
