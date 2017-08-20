@@ -344,6 +344,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 601b00ca0b9de0247beae089ec7e640f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &964736119 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1575861624235256, guid: c388c3628ccbd4822a7a04e47c5f1997,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029792948}
+--- !u!114 &964736125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964736119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 01b5022a404e3da4d9fc7b5f02cc7323, type: 2}
 --- !u!1 &988979797
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +742,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1773865770832210, guid: c388c3628ccbd4822a7a04e47c5f1997, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114498232447654560, guid: c388c3628ccbd4822a7a04e47c5f1997,
+        type: 2}
+      propertyPath: mouseLookEnable
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
