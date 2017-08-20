@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 11400000}
   - component: {fileID: 11400002}
   m_Layer: 0
-  m_Name: SpeechBalloon
+  m_Name: SpeechBalloon2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.77, y: 5.82, z: 1.89}
+  m_LocalPosition: {x: -3, y: 6, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -244,8 +244,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 4
-      minScalar: 2
+      scalar: 3
+      minScalar: 3
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3231,8 +3231,8 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: ed1b89d39279f564ea077ad8e46f3595, type: 2}
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 934e860dc0df184448177fb7e103f853, type: 2}
+  - {fileID: 2100000, guid: 934e860dc0df184448177fb7e103f853, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
