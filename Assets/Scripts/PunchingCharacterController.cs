@@ -1,11 +1,13 @@
 ﻿using UnityStandardAssets.Characters.FirstPerson;
 using UnityEngine;
+using System.Collections;
 
 public class PunchingCharacterController : MonoBehaviour {
 	[SerializeField] MouseLook mouseLook;
     [SerializeField] Camera mainCamera;
     [SerializeField] GameObject characterObject;
     [SerializeField] HandController handController;
+    [SerializeField] GameObject bodyHitSoundObj;
     [SerializeField] bool mouseLookEnable;
 
     private Vector3 prevCharacterPosition;
@@ -14,8 +16,16 @@ public class PunchingCharacterController : MonoBehaviour {
 	void Start () {
 		mouseLook.Init(transform, mainCamera.transform);
         prevCharacterPosition = characterObject.transform.position;
-        OnPunchHit();
+        StartCoroutine(PlayHitSoundCorutine());
+        //OnPunchHit();
 	}
+
+    private IEnumerator PlayHitSoundCorutine(){
+        GameObject soundobj = Util.InstantiateTo(this.gameObject, bodyHitSoundObj);
+        AudioSource audioSource = soundobj.GetComponent<AudioSource>();
+        yield return new WaitForSeconds(audioSource.clip.length);
+        Destroy(soundobj);
+    }
 	
 	// Update is called once per frame
 	void Update () {

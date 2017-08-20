@@ -305,6 +305,8 @@ MonoBehaviour:
   mainCamera: {fileID: 20684376050736836}
   characterObject: {fileID: 1773865770832210}
   handController: {fileID: 114102933516375862}
+  bodyHitSoundObj: {fileID: 1559902988203284, guid: a36e7deebf35a4c088668f66435ea81a,
+    type: 2}
   mouseLookEnable: 0
 --- !u!124 &124291357517020248
 Behaviour:
