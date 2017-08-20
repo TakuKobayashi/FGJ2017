@@ -11,6 +11,8 @@ public class PunchingCharacterController : MonoBehaviour {
     [SerializeField] bool mouseLookEnable;
 	[SerializeField] Canvas mainCanvas;
     [SerializeField] GameObject completeViewObj;
+    [SerializeField] float xpower = 5f;
+	[SerializeField] float zpower = 20f;
 
     private bool isMove = false;
     private Vector3 prevCharacterPosition;
@@ -74,7 +76,11 @@ public class PunchingCharacterController : MonoBehaviour {
 
     private void ShootCharacter(Vector3 hitSpeed){
 		Rigidbody rigidbody = characterObject.AddComponent<Rigidbody>();
-        Vector3 shootVector = Util.ShootVectorFromSpeed(characterObject.gameObject.transform.position, new Vector3(10, 0, -20), hitSpeed.sqrMagnitude);
+        Vector3 shootVector = Util.ShootVectorFromSpeed(
+            characterObject.gameObject.transform.position,
+            new Vector3(Mathf.Abs(2f + hitSpeed.x) * xpower, 0, - Mathf.Abs(2f + hitSpeed.z) * zpower),
+            Mathf.Sqrt(Mathf.Pow(2f + hitSpeed.x, 2f) + Mathf.Pow(hitSpeed.y, 2f) + Mathf.Pow(2f + hitSpeed.z, 2f))
+        );
 		// 速さベクトルのままAddForce()を渡してはいけないぞ。力(速さ×重さ)に変換するんだ
 		Vector3 force = shootVector * rigidbody.mass;
 		rigidbody.AddForce(force, ForceMode.Impulse);
