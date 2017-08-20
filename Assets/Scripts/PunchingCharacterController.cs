@@ -9,6 +9,8 @@ public class PunchingCharacterController : MonoBehaviour {
     [SerializeField] HandController handController;
     [SerializeField] GameObject bodyHitSoundObj;
     [SerializeField] bool mouseLookEnable;
+	[SerializeField] Canvas mainCanvas;
+    [SerializeField] GameObject completeViewObj;
 
     private bool isMove = false;
     private Vector3 prevCharacterPosition;
@@ -38,7 +40,7 @@ public class PunchingCharacterController : MonoBehaviour {
         if (isMove && !isOnLand && characterObject.transform.position.y < startCharacterPosition.y)
 		{
             isOnLand = true;
-            Debug.Log("Land:" + score.ToString());
+            ShowCompleteView();
 		}
         HandModel[] hands = handController.GetAllPhysicsHands();
         for (int i = 0; i < hands.Length;++i){
@@ -48,6 +50,10 @@ public class PunchingCharacterController : MonoBehaviour {
 		mainCamera.transform.position = mainCamera.transform.position + DiffCharacterObjectPosition();
 		prevCharacterPosition = characterObject.transform.position;
 	}
+
+    private void ShowCompleteView(){
+        Util.InstantiateTo(mainCanvas.gameObject, completeViewObj);
+    }
 
 	void FixedUpdate()
 	{

@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 92488582519604572}
   - component: {fileID: 124291357517020248}
   - component: {fileID: 81310997111327386}
+  - component: {fileID: 114977554834341494}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -307,7 +308,22 @@ MonoBehaviour:
   handController: {fileID: 114102933516375862}
   bodyHitSoundObj: {fileID: 1559902988203284, guid: a36e7deebf35a4c088668f66435ea81a,
     type: 2}
-  mouseLookEnable: 0
+  mouseLookEnable: 1
+  mainCanvas: {fileID: 0}
+  completeViewObj: {fileID: 1078312557940596, guid: c0d14fa1b5e1649b0a2e9e0a273b72a4,
+    type: 2}
+--- !u!114 &114977554834341494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575861624235256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 01b5022a404e3da4d9fc7b5f02cc7323, type: 2}
 --- !u!124 &124291357517020248
 Behaviour:
   m_ObjectHideFlags: 1
